@@ -7,7 +7,8 @@ def is_odd(a_number):
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    return None
+    the_answer = a_number % 2
+    return the_answer > 0
 
 
 def fix_it(moves=True, should_move=True):
@@ -25,7 +26,18 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements. 
     As an extra challenge, see if you can get that down to three.
     """
-    return None
+   
+    if moves==True and should_move==True:
+        the_answer = print("No Problem")
+    elif should_move==False:
+        the_answer = print('Duct Tape')
+    
+    if moves==False and should_move==True:
+        the_answer = print("No Problem")
+    elif should_move==False:
+        the_answer = print("WD-40")
+    
+        return the_answer
 
 
 def loops_1a():
@@ -35,7 +47,11 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    stars = ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
+    for star in stars:
+        print(star)
+    
+    return stars
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -45,7 +61,12 @@ def loops_1c(number_of_items=5, symbol="#"):
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    return None
+
+    hash = []
+    for x in range(0, number_of_items):
+        hash.append(symbol)
+
+    return hash
 
 
 def loops_2():
@@ -66,7 +87,14 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+
+    stars = []
+    more_stars = []
+    for x in range(0, 10):
+        stars.append('*')
+        more_stars.append(stars)
+
+    return more_stars
 
 
 def loops_3():
@@ -90,8 +118,16 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
 
+    row_of_numbers = []
+    list_of_numbers = []
+    for x in range(0, 10):
+        row_of_numbers.append(str(x))
+        row_of_numbers = row_of_numbers*10
+        list_of_numbers.append(row_of_numbers)
+        row_of_numbers = []
+        
+    return list_of_numbers
 
 def loops_4():
     """Make a block of numbers that rises left to right.
@@ -110,7 +146,13 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    row_of_numbers = []
+    list_of_numbers = []
+    for x in range(0, 10):
+        row_of_numbers.append(str(x))
+        list_of_numbers.append(row_of_numbers)
+        
+    return list_of_numbers
 
 
 def loops_5():
@@ -137,7 +179,16 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    numb_row = []
+    numb_list = []
+
+    for i in range(0, 10):
+        for j in range(0, 5):
+            numb_row.append('(' + 'i' + str(i) + ',' + ' j' + str(j) + ')')
+        numb_list.append(numb_row)
+        numb_row = []
+
+    return numb_list
 
 
 def loops_6():
