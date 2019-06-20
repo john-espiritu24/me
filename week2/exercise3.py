@@ -211,7 +211,16 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    numb_row = []
+    numb_list = []
+    i = 0
+    for i in range(10):
+        for i in range(i+1):
+            numb_row.append(i)
+        numb_list.append(numb_list)
+        numb_row = []
+
+    return numb_list
 
 
 def loops_7():
