@@ -244,7 +244,7 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    return nope
 
 
 def lp(some_kind_of_list, exercise_name):
