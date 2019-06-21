@@ -44,14 +44,16 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    condition = False
-    while condition == False:
-        number_input = int(input('Type a number between ' + str(low) + ' and ' + str(high) + ' :'))
-        if number_input > low and number_input < high:
-            condition = True
-        else: 
-            condition = False
-    return number_input
+    print("Give a number between 20 and 60!")
+    given = int(input())
+    if given <= 20:
+        print("Higher!")
+    elif given >= 60:
+        print("Lower")
+    else:
+        return print("Ring-a-ding-ding Baby!")
+
+
 
 
 
@@ -87,7 +89,7 @@ if __name__ == "__main__":
     print("\nlone_ranger", lone_ranger(1, 10, 3))
     print("\ntwo_step_ranger", two_step_ranger(1, 10))
     print("\nstubborn_asker")
-    stubborn_asker(30, 45)
+    stubborn_asker(60, 45)
     print("\nnot_number_rejector")
     not_number_rejector("Enter a number: ")
     print("\nsuper_asker")
