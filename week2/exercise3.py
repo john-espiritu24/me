@@ -214,11 +214,7 @@ def loops_6():
     numb_row = []
     numb_list = []
     i = 0
-    for i in range(10):
-        for i in range(i+1):
-            numb_row.append(i)
-        numb_list.append(numb_list)
-        numb_row = []
+
 
     return numb_list
 
@@ -244,7 +240,7 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return nope
+    return None
 
 
 def lp(some_kind_of_list, exercise_name):
