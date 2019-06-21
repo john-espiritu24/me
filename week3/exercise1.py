@@ -13,9 +13,10 @@ def loop_ranger(start, stop=None, step=1):
     function, but we'd like you to do it the long way, probably using a loop.
     """
     start = 0
-    stop = 11
-    return None
-
+    stop = 10
+    while start < stop:
+        start = start + step
+        return start
 
 def lone_ranger(start, stop, step):
     """Duplicate the functionality of range.
@@ -44,15 +45,16 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    print("Give a number between 20 and 60!")
+    print("Give a number between 20 and 35!")
     given = int(input())
     if given <= 20:
         print("Higher!")
-    elif given >= 60:
-        print("Lower")
+        stubborn_asker(low, high)
+    elif given >= 35:
+        print("Lower!")
+        stubborn_asker(low, high)
     else:
         return print("Ring-a-ding-ding Baby!")
-
 
 
 

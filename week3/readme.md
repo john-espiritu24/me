@@ -32,3 +32,9 @@ while idx <= len(my_list)
     idx = idx + 1
 
 != is not equal
+
+DATA SET ASSIGNMENT
+- Pick a real data set
+- Stravo thru an api
+- Open data sets from government agencies
+- base data sets off twitter hashtags

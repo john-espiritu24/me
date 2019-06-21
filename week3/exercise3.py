@@ -26,7 +26,17 @@ def advancedGuessingGame():
     purpose if you can!
     """
 
-    return "You got it!"
+    print("Welcome to the guessing game!")
+    game = True
+
+    while game == True:
+      lowerbound = input("Enter a lower bound: ")
+
+    
+    upperbound = input("Now enter an upper bound: ")
+
+
+  
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
 
