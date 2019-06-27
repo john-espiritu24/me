@@ -33,8 +33,15 @@ while idx <= len(my_list)
 
 != is not equal
 
+isistance(object, classinfo) 
+- takes object and will say T/F based on the class info e.g (5, int)
+variable.isdigit()
+- will take a variable and check if it's an int
+
 DATA SET ASSIGNMENT
 - Pick a real data set
 - Stravo thru an api
 - Open data sets from government agencies
 - base data sets off twitter hashtags
+- find sth by week 4
+

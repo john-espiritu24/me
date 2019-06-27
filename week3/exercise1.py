@@ -12,19 +12,20 @@ def loop_ranger(start, stop=None, step=1):
     The look up the docs for range(), you can answer this with just the range 
     function, but we'd like you to do it the long way, probably using a loop.
     """
-    start = 0
-    stop = 10
-    while start < stop:
-        start = start + step
-        return start
+    numbers = []
+
+    while start <= stop:
+        numbers.append(start)
+        start += step
+    return numbers
 
 def lone_ranger(start, stop, step):
     """Duplicate the functionality of range.
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-
-    return None
+    numbers = list(range(start, stop, step))
+    return numbers
 
 
 def two_step_ranger(start, stop):
@@ -33,8 +34,8 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    x = list(range(0, 11, 2))
-    return x
+    numbers = list(range(0, 11, 2))
+    return numbers
 
 
 def stubborn_asker(low, high):
@@ -46,15 +47,19 @@ def stubborn_asker(low, high):
     Look up the docs for input
     """
     print("Give a number between 20 and 35!")
-    given = int(input())
-    if given <= 20:
-        print("Higher!")
-        stubborn_asker(low, high)
-    elif given >= 35:
-        print("Lower!")
-        stubborn_asker(low, high)
-    else:
-        return print("Ring-a-ding-ding Baby!")
+
+    game = True
+    while game == True:
+        given = int(input())
+        if given <= 20:
+            print("Higher!")
+        elif given >= 35:
+            print("Lower!")
+        else:
+            print("Ring-a-ding-ding Baby!")
+            game = False
+
+    return given
 
 
 
@@ -66,7 +71,18 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    answer = False
+    
+    print("Give me a number!")
+    while answer == False:
+        given = input()
+        if given.isdigit() == True:
+            print("Salamat!")
+            answer = True
+        else:
+            print("I said a number!")
+
+    return given
 
 
 def super_asker(low, high):
