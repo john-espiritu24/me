@@ -14,9 +14,9 @@ def loop_ranger(start, stop=None, step=1):
     """
     numbers = []
 
-    while start <= stop:
+    while start < stop:
         numbers.append(start)
-        start += step
+        start = start + step
     return numbers
 
 def lone_ranger(start, stop, step):
@@ -34,7 +34,7 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    numbers = list(range(0, 11, 2))
+    numbers = list(range(start, stop, 2))
     return numbers
 
 
@@ -51,9 +51,9 @@ def stubborn_asker(low, high):
     game = True
     while game == True:
         given = int(input())
-        if given <= 20:
+        if given < low:
             print("Higher!")
-        elif given >= 35:
+        elif given > high:
             print("Lower!")
         else:
             print("Ring-a-ding-ding Baby!")
@@ -71,16 +71,15 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    answer = False
-    
     print("Give me a number!")
+    
+    answer = False
     while answer == False:
-        given = input()
-        if given.isdigit() == True:
-            print("Salamat!")
+        try:
+            given = int(input())
             answer = True
-        else:
-            print("I said a number!")
+        except:
+            print("No.")
 
     return given
 
@@ -93,7 +92,22 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    return None
+    print("Give me a number between 20 and 35!")
+    game = True
+    while game == True:
+        try:
+            given = int(input())
+            if given > 35:
+                print("Lower!")
+            elif given < 20:
+                print("Higher!")
+            else:
+                print("Well done!")
+                game = False
+        except:
+            print("A number please...")
+
+    return given
 
 
 if __name__ == "__main__":

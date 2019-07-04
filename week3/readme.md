@@ -45,3 +45,8 @@ DATA SET ASSIGNMENT
 - base data sets off twitter hashtags
 - find sth by week 4
 
+- pick a data set
+- document it
+- explore it
+- describe it
+- find amzaing insight
