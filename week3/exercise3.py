@@ -32,10 +32,10 @@ def advancedGuessingGame():
     integer = False 
     while integer == False:
       try:
-          lowerBound = int(input("Enter a lower bound: "))
-          integer = True
+        lowerBound = int(input("Enter a lower bound: "))
+        integer = True
       except:
-          print("No.")
+        print("No.")
     
     integer = False
     while integer == False:
