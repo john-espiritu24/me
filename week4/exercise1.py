@@ -79,7 +79,31 @@ def wordy_pyramid():
     ]
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. &minLength=
     """
-    pass
+
+    pyramid = []
+    word_length = 3
+    while word_length <= 19:
+        wordgen_url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=" + str(word_length)
+        word_get = requests.get(wordgen_url)
+        while word_get.status_code != 200:
+            word_get = requests.get(wordgen_url)
+        word = word_get.content
+        pyramid.append(word)
+        print(word) 
+        word_length = word_length + 2
+    
+    word_length = 20
+    while word_length >= 3:
+        wordgen_url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=" + str(word_length)
+        word_get = requests.get(wordgen_url)
+        while word_get.status_code != 200:
+            word_get = requests.get(wordgen_url)
+        word = word_get.content
+        pyramid.append(word)
+        print(word)
+        word_length = word_length - 2
+
+    return pyramid
 
 
 def pokedex(low=1, high=5):
@@ -96,12 +120,19 @@ def pokedex(low=1, high=5):
          variable and then future access will be easier.
     """
     template = "https://pokeapi.co/api/v2/pokemon/{id}"
-
-    url = template.format(base=base, id=5)
-    r = requests.get(url)
-    if r.status_code is 200:
-        the_json = json.loads(r.text)
-
+    
+    currentheight = 0
+    for i in range(low,high):
+        url = template.format(base=template, id=i)
+        pokeapi = requests.get(url)
+        if pokeapi.status_code is 200:
+            pokedata = json.loads(pokeapi.text)
+            greaterheight = pokedata["height"]
+            if greaterheight > currentheight:
+                currentheight = greaterheight
+                name = pokeapi["name"]  
+                weight = pokeapi["weight"]
+                height = pokeapi["height"] 
 
     return {"name": None, "weight": None, "height": None}
 

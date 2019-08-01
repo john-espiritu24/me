@@ -26,18 +26,15 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements. 
     As an extra challenge, see if you can get that down to three.
     """
-   
-    if moves==True and should_move==True:
-        the_answer = print("No Problem")
-    elif should_move==False:
-        the_answer = print('Duct Tape')
-    
-    if moves==False and should_move==True:
-        the_answer = print("No Problem")
-    elif should_move==False:
-        the_answer = print("WD-40")
-    
-        return the_answer
+
+    if moves==True and should_move==False:
+        solution = "Duct Tape"
+    elif moves==False and should_move==True:
+        solution = "WD-40"
+    else:
+        solution = "No Problem"
+
+    return solution
 
 
 def loops_1a():
@@ -211,12 +208,16 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    numb_row = []
-    numb_list = []
-    i = 0
+    row_of_numbers = []
+    list_of_numbers = []
+    x = 0
+    if x < 10:    
+        for x in range(x,10):
+            row_of_numbers.append(str(x))
+            list_of_numbers.append(list(row_of_numbers))
+            x=x+1
 
-
-    return numb_list
+    return list_of_numbers
 
 
 def loops_7():
@@ -240,7 +241,7 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+  
 
 
 def lp(some_kind_of_list, exercise_name):
