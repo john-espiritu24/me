@@ -35,7 +35,7 @@ def three_counter(input_list=[1, 4, 3, 5, 7, 1, 3, 2, 3, 3, 5, 3, 7]):
     return count
 
 
-def fizz_buzz(start = 1, stop = 100):
+def fizz_buzz(start = 1, stop = 101):
     """Do the fizzBuzz.
     This is the most famous basic programming test of all time!
        "Write a program that prints the numbers from 1 to 100. But for
@@ -106,19 +106,16 @@ def best_letter_for_pets():
     import string
 
     the_alphabet = string.ascii_lowercase
-    letter_count = 0
-    best_letter = "Nothing"
-
-    pet_filter(letters = the_alphabet)
-        for pet_name in pets:
-            if letter in pet_name:
-                letter_count = letter_count + 1
-                print(letter_count)
-                
-
-
-    return ""
-
+    current_letter = []
+    best_letter = []
+    
+    for letter in the_alphabet:
+        current_letter = []
+        current_letter = pet_filter(letter)
+        if len(current_letter) > len(best_letter):
+            best_letter = current_letter
+            the_best_letter = letter
+    return the_best_letter
 
 def make_filler_text_dictionary():
     """Make a dictionary of random words filler text.
