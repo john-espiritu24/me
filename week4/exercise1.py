@@ -119,7 +119,7 @@ def pokedex(low=1, high=5):
          get very long. If you are accessing a thing often, assign it to a
          variable and then future access will be easier.
     """
-    template = "https://pokeapi.co/api/v2/pokemon/{id}"
+    """template = "https://pokeapi.co/api/v2/pokemon/{id}"
     
     currentheight = 0
     for i in range(low,high):
@@ -134,7 +134,7 @@ def pokedex(low=1, high=5):
                 weight = pokeapi["weight"]
                 height = pokeapi["height"] 
 
-    return {"name": None, "weight": None, "height": None}
+    return {"name": None, "weight": None, "height": None}"""
 
 
 def diarist():
