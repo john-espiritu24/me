@@ -45,8 +45,8 @@ def do_bunch_of_bad_things():
 # return a list of countdown messages, much like in the bad function above.
 # It should say something different in the last message.
 def countdown(message, start, stop, completion_message):
-    for i in range(start,stop,-1):
-        print(str(message) + str(i))
+    for i in range(start,stop-1,-1):
+        print(str(message) + " " + str(i))
     print(completion_message)
     return None
 
@@ -62,7 +62,7 @@ def countdown(message, start, stop, completion_message):
 # hand hold quite nicely.
 def calculate_hypotenuse(base, height):
     hyp = (base ** 2 + height ** 2) ** (1 / 2)
-    return(hyp)
+    return hyp
 
 
 
